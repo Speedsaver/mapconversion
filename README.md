@@ -33,22 +33,9 @@ pip install --upgrade ogr2osm
 git clone https://github.com/Speedsaver/ogr2osmNEW.git && cd ogr2osmNEW
 ```
 ```console
-git submodule update --init
-```
-```console
 sudo python setup.py install
 ```
 
-### To update
-```console
-cd ogr2osmNEW
-```
-```console
-git pull
-```
-```console
-git submodule update
-```
 ### Running from source without installation
 
 If you do not have the required permissions to install ogr2osm, you can run the package as a module directly from the cloned source.
