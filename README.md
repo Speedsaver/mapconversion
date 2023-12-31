@@ -33,7 +33,7 @@ pip install --upgrade ogr2osm
 git clone https://github.com/Speedsaver/ogr2osmNEW.git && cd ogr2osmNEW
 ```
 ```
-python setup.py install
+sudo python setup.py install
 ```
 
 ### Running from source without installation
