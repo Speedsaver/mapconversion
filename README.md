@@ -66,8 +66,21 @@ ogr2osm --positive-id Streets.shp
 xmllint --pretty 1 Streets.osm > linted.osm && rm Streets.osm
 ```
 ```console
-./maptool -i linted.osm map.bin && rm linted.osm 
+./maptool -i linted.osm map.bin && rm linted.osm
 ```
+
+# OpenStreetMap:
+
+To use free OpenStreetMap .osm xml files exported either directly from https://www.openstreetmap.org (very small area bounding boxes), Overpass API (within www.openstreetmap.org but for larger area bounding boxes) or downloaded from https://extract.bbbike.org/ (for irregular shaped bounding boxes) or https://download.geofabrik.de/ (for regions, countries and continents) in your Speedsaver device please use the maptool tool directly.
+
+```
+./maptool -i in.osm out.bin
+```
+
+Copy your newly created osm .bin map file to the appropriate folder in the git for your platform of choice. Navit will automatically find it.
+
+Your OpenStreetMap derived maps may have very patchy or non-existent MAXSPEED tags for your routes depending on the level of community engagement. However you can easily contribute by uploading missing information to OpenStreetMap yourself, see https://wiki.openstreetmap.org/wiki/Key:maxspeed
+
 
 ### Upgrading
 
