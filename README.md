@@ -32,6 +32,7 @@ pip install --upgrade ogr2osm
 ```console
 git clone https://github.com/Speedsaver/ogr2osmNEW.git && cd ogr2osm
 ```
+```
 python setup.py install
 ```
 
