@@ -66,7 +66,7 @@ ogr2osm --positive-id Streets.shp
 xmllint --pretty 1 Streets.osm > linted.osm && rm Streets.osm
 ```
 ```console
-./maptool -i linted.osm linted.bin
+./maptool -i linted.osm map.bin && rm linted.osm 
 ```
 
 ### Upgrading
