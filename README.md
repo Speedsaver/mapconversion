@@ -2,7 +2,7 @@
 
 ![license](https://img.shields.io/github/license/roelderickx/ogr2osm) [![test](https://github.com/roelderickx/ogr2osm/actions/workflows/test.yml/badge.svg)](https://github.com/roelderickx/ogr2osm/actions/workflows/test.yml) [![docker](https://github.com/roelderickx/ogr2osm/actions/workflows/deploy.yml/badge.svg)](https://github.com/roelderickx/ogr2osm/actions/workflows/deploy.yml)
 
-A tool for converting ogr-readable files like shapefiles into .pbf or .osm data
+Tools for converting ogr-readable files like shapefiles into .pbf or .osm data and further processing (linting) and conversion to navit-friendly binfiles for use in our Speedsaver device
 
 ## Installation
 
@@ -30,7 +30,7 @@ pip install --upgrade ogr2osm
 ### From source
 
 ```console
-git clone https://github.com/Speedsaver/ogr2osmNEW.git && cd ogr2osmNEW
+git clone https://github.com/Speedsaver/mapconversion.git && cd mapconversion
 ```
 ```console
 sudo python setup.py install
@@ -40,7 +40,7 @@ sudo python setup.py install
 
 If you do not have the required permissions to install ogr2osm, you can run the package as a module directly from the cloned source.
 ```console
-git clone https://github.com/Speedsaver/ogr2osmNEW.git && cd ogr2osmNEW
+git clone https://github.com/Speedsaver/mapconversion.git && cd mapconversion
 ```
 ```console
 python -m ogr2osm
