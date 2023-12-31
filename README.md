@@ -57,7 +57,19 @@ The usage of ogr2osm with Docker is the same as the usage as a standalone applic
 docker run -ti --rm -v $(pwd):/app roelderickx/ogr2osm /app/test.json -o /app/test.osm
 ```
 
-## Upgrading
+### Conversion
+Place a Maptool executable binary (use our Navit repo to create this) and your Streets.shp and corresponding Streets.shx files in the main directory and run
+```console
+ogr2osm --positive-id Streets.shp
+```
+```console
+xmllint --pretty 1 Streets.osm > linted.osm && rm Streets.osm
+```
+```console
+./maptool -i linted.osm linted.bin
+```
+
+### Upgrading
 
 If you are upgrading from pnorman's version and you use a translation file for your data, be sure to read about [the modifications you will need to do](https://github.com/roelderickx/ogr2osm-translations).
 
