@@ -41,7 +41,7 @@ sudo python setup.py install
 
 ### To update
 ```console
-cd ogr2osm
+cd ogr2osmNEW
 ```
 ```console
 git pull
@@ -53,8 +53,9 @@ git submodule update
 
 If you do not have the required permissions to install ogr2osm, you can run the package as a module directly from the cloned source.
 ```console
-git clone https://github.com/roelderickx/ogr2osm.git
-cd ogr2osm
+git clone https://github.com/Speedsaver/ogr2osmNEW.git && cd ogr2osmNEW
+```
+```console
 python -m ogr2osm
 ```
 
