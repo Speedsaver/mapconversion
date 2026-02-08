@@ -73,8 +73,14 @@ xmllint --pretty 1 Streets.osm > linted.osm && rm Streets.osm
 
 To use free OpenStreetMap .osm xml files exported either directly from https://www.openstreetmap.org (very small area bounding boxes), Overpass API (within www.openstreetmap.org but for larger area bounding boxes, note OSM's download server limits RAM and quickly runs out around 700 MB, limiting file size) or downloaded from https://extract.bbbike.org/ (for irregular shaped bounding boxes, but limited to 128 MB) or https://download.geofabrik.de/ (for regions, countries and continents) in your Speedsaver device please use maptool directly. Note you will still need to run the downloaded xml file through ogr2osm and xmllint as above before maptool will accept it.
 
+```console
+ogr2osm --positive-id name_of_map
 ```
-./maptool -i in.osm out.bin
+```console
+xmllint --pretty 1 name_of_map.osm > linted.osm && rm name_of_map.osm
+```
+```
+./maptool -i linted.osm name_of_map.bin
 ```
 
 Copy your newly created osm .bin map file to the appropriate folder in the git for your platform of choice. Navit will automatically find it.
