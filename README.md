@@ -80,7 +80,7 @@ ogr2osm --positive-id name_of_map
 xmllint --pretty 1 name_of_map.osm > linted.osm && rm name_of_map.osm
 ```
 ```
-./maptool -i linted.osm name_of_map.bin
+./maptool -i linted.osm name_of_map.bin && rm linted.osm
 ```
 
 Copy your newly created osm .bin map file to the appropriate folder in the git for your platform of choice. Navit will automatically find it.
