@@ -95,7 +95,7 @@ xmllint --pretty 1 gis_osm_roads_free_1.osm > linted.osm && rm gis_osm_roads_fre
 
 Copy your newly created osm .bin map file to the appropriate folder in the git for your platform of choice. Navit will automatically find it.
 
-Alternatively, you may save yourself a lot of time and effort and simply use Navits pre-compiled .bin files from their mapserver in Github, updated daily: https://github.com/navit-gps/gh-actions-mapserver/releases
+Alternatively, you may save yourself a lot of time and effort and simply use Navits pre-compiled .bin files from their mapserver on Github, updated daily: https://github.com/navit-gps/gh-actions-mapserver/releases
 
 Your OpenStreetMap derived maps may have very patchy or non-existent MAXSPEED tags for your routes depending on the level of community engagement. However you can easily contribute by uploading missing information to OpenStreetMap yourself, see https://wiki.openstreetmap.org/wiki/Key:maxspeed
 
