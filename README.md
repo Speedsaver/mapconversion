@@ -71,7 +71,14 @@ xmllint --pretty 1 Streets.osm > linted.osm && rm Streets.osm
 
 # OpenStreetMap:
 
-To use free OpenStreetMap .osm xml files exported either directly from https://www.openstreetmap.org (very small area bounding boxes), Overpass API (within www.openstreetmap.org but for larger area bounding boxes, note OSM's download server limits RAM and quickly runs out around 700 MB, limiting file size) or downloaded from https://extract.bbbike.org/ (for irregular shaped bounding boxes, but limited to 128 MB) or https://download.geofabrik.de/ (for regions, countries and continents) in your Speedsaver device please use maptool directly. Note you will still need to run the downloaded xml file through ogr2osm and xmllint as above before maptool will accept it.
+To use free OpenStreetMap .osm xml files exported either directly from 
+1: https://www.openstreetmap.org (very small area bounding boxes). Not recommended
+
+2: Overpass API from within www.openstreetmap.org but for larger area bounding boxes. Note Overpass API's download server limits RAM and quickly runs out around 700 MB, restricting file size. Not recommended.
+
+3: Downloaded from https://extract.bbbike.org/. Useful for irregular shaped bounding boxes, but limited to 128 MB. Not recommended.
+
+4: Downloaded from https://download.geofabrik.de/. Provides regions, countries and continents. Recommended.
 
 ```console
 ogr2osm --positive-id name_of_map
