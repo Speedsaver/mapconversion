@@ -71,7 +71,8 @@ xmllint --pretty 1 Streets.osm > linted.osm && rm Streets.osm
 
 # OpenStreetMap:
 
-To use free OpenStreetMap .osm xml files exported either directly from 
+To use free OpenStreetMap .osm xml files exported either directly from:
+
 1: https://www.openstreetmap.org (very small area bounding boxes). Not recommended
 
 2: Overpass API from within www.openstreetmap.org but for larger area bounding boxes. Note Overpass API's download server limits RAM and quickly runs out around 700 MB, restricting file size. Not recommended.
