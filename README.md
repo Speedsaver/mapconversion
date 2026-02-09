@@ -79,19 +79,23 @@ To use free OpenStreetMap .osm xml files exported either directly from:
 
 3: Downloaded from https://extract.bbbike.org/. Useful for irregular shaped bounding boxes, but limited to 128 MB. Not recommended.
 
-4: Downloaded from https://download.geofabrik.de/. Provides regions, countries and continents. Recommended.
+4: Downloaded from https://download.geofabrik.de/. Provides counties, regions, countries and continents. Recommended.
+
+Place a copy of the Maptool executable binary in the downloaded .shp Shapefiles directory and from that directory run:
 
 ```console
-ogr2osm --positive-id name_of_map
+ogr2osm --positive-id gis_osm_roads_free_1.shp
 ```
 ```console
-xmllint --pretty 1 name_of_map.osm > linted.osm && rm name_of_map.osm
+xmllint --pretty 1 gis_osm_roads_free_1.osm > linted.osm && rm gis_osm_roads_free_1.osm
 ```
 ```
-./maptool -i linted.osm name_of_map.bin && rm linted.osm
+./maptool -i linted.osm name_your_map.bin && rm linted.osm
 ```
 
 Copy your newly created osm .bin map file to the appropriate folder in the git for your platform of choice. Navit will automatically find it.
+
+Alternatively, you may save yourself a lot of time and effort and simply use Navits pre-compiled .bin files from their mapserver in Github, updated daily: https://github.com/navit-gps/gh-actions-mapserver/releases
 
 Your OpenStreetMap derived maps may have very patchy or non-existent MAXSPEED tags for your routes depending on the level of community engagement. However you can easily contribute by uploading missing information to OpenStreetMap yourself, see https://wiki.openstreetmap.org/wiki/Key:maxspeed
 
