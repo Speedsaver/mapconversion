@@ -97,6 +97,18 @@ Copy your newly created osm .bin map file to the appropriate folder in the git f
 
 Alternatively, you may save yourself a lot of time and effort and simply use Navits pre-compiled .bin files from their mapserver on Github, updated daily: https://github.com/navit-gps/gh-actions-mapserver/releases
 
+*Note our Speedsaver repos have set the filesystem size at a fixed 700 MB. Depending on your map chosen and the method of conversion, you may encounter a fatal “max_leb_cnt to low” error when compiling. Simply run (in a tty virtual terminal, NOT in the GUI. Tty usually accessed by pressing Ctrl+Alt+F2 or Ctrl+Alt+F3)
+
+---
+make menuconfig
+---
+
+Navigate to "Filesystem images" / exact size and change 700M to something that will accomodate your map/s, e.g. 3000M for OSM UK and Ireland. Also navigate to "Logical eraseblock size", convert the hex value here to decimal (Google it), add the "needed" number in your error message, convert back to hex, insert this answer, save and again run:
+
+---
+make
+---
+
 Your OpenStreetMap derived maps may have very patchy or non-existent MAXSPEED tags for your routes depending on the level of community engagement. However you can easily contribute by uploading missing information to OpenStreetMap yourself, see https://wiki.openstreetmap.org/wiki/Key:maxspeed
 
 
